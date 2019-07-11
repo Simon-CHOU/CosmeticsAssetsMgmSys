@@ -2,7 +2,8 @@ package com.simon.assets.entity;
 
 import lombok.Data;
 
-import java.util.Date;
+import javax.validation.constraints.NotBlank;
+import java.time.LocalDate;
 
 /**
  * 出库记录
@@ -11,7 +12,9 @@ import java.util.Date;
 @Data
 public class OutRec {
     private Integer id;
+    @NotBlank(message = "编号不能为空")
     private String code;//资产编号
-    private Date out_date;//出库日期
+    @NotBlank(message = "日期不能为空")
+    private LocalDate out_date;//出库日期
     private String note;//备注
 }
