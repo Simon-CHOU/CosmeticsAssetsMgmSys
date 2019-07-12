@@ -1,5 +1,10 @@
 # 女友化妆品资产管理系统Demo
 
+## Repository
+GitHub: https://github.com/Simon-CHOU/CosmeticsAssetsMgmSys
+
+码云：https://gitee.com/xingyongzhi/CosmeticsAssetsMgmSys
+
 ## 开发环境：
 - Windows 10.0.17763.615
 - IntelliJ IDEA ULTIMATE 2018.3
