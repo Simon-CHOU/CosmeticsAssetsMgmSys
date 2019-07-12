@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
+
 /**
  * 对应资产列表
  * @author simon
@@ -17,7 +18,7 @@ public class Asset {
     @NotBlank(message = "名称不能为空")
     private String name;//名称
     private String type;//种类
-    private LocalDate buy_date;//购买日期
+    private LocalDate buyDate;//购买日期
     private Double price;//购入价格
     private Integer guaranteeMonth;//保质期，以月为单位
 }
