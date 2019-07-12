@@ -18,7 +18,7 @@ public class TryDB {
     @Autowired
     private UserMapper userMapper;
 
-    @ApiOperation(value="获取用户列表", notes="")
+    @ApiOperation(value = "获取用户列表", notes = "")
     @GetMapping(value = "/userlist")
     public Result testSelect() {
         System.out.println(("----- selectAll method test ------"));

@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 /**
  * 对应资产列表
+ *
  * @author simon
  */
 @Data
