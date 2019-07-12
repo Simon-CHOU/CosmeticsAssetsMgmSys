@@ -27,7 +27,7 @@ public class OutRecController {
 
     @GetMapping(value = "/{id}")
     @ApiOperation(value="获取指定ID的出库记录", notes="")
-    @ApiImplicitParam(name = "id", value = "出库记录ID", required = true, dataType = "Integer")
+    @ApiImplicitParam(name = "id", value = "出库记录ID", required = true, dataType = "int")
     public Result findById(@PathVariable("id") Integer id) {
         return Result.success(outRecService.findById(id));
     }
@@ -50,19 +50,19 @@ public class OutRecController {
 
     @DeleteMapping(value = "/{id}")
     @ApiOperation(value="根据ID删除出库记录", notes="")
-    @ApiImplicitParam(name = "id", value = "出库记录ID", required = true, dataType = "Integer")
+    @ApiImplicitParam(name = "id", value = "出库记录ID", required = true, dataType = "int")
     public Result delete(@PathVariable("id") Integer id) {
         int res = outRecService.deleteById(id);
         return Result.success(res);
     }
 
-    @GetMapping(value = "/{cur}/{size}")
+    @GetMapping(value = "/{current}/{size}")
     @ApiOperation(value="分页查询出库记录", notes="")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "current", value = "当前页数", required = true, dataType = "Integer"),
-            @ApiImplicitParam(name = "size", value = "每页结果条数", required = true, dataType = "Integer")
+            @ApiImplicitParam(name = "current", value = "当前页数", required = true, dataType = "int"),
+            @ApiImplicitParam(name = "size", value = "每页结果条数", required = true, dataType = "int")
     })
-    public Result findPage(@PathVariable("cur") Integer current, @PathVariable("size") Integer size) {
+    public Result findPage(@PathVariable("current") Integer current, @PathVariable("size") Integer size) {
         List<OutRec> list = outRecService.findPage(current, size);
         return Result.success(list);
     }
