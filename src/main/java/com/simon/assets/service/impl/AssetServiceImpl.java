@@ -8,6 +8,7 @@ import com.simon.assets.entity.Asset;
 import com.simon.assets.service.AssetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class AssetServiceImpl  implements AssetService {
     @Override
     public List<Asset> findListAll() {
         List<Asset> list =  assetMapper.selectList(null);
+//        List<Asset> list =  assetMapper.findAll();
         list.forEach(System.out::println);
         return list;
     }
@@ -30,16 +32,19 @@ public class AssetServiceImpl  implements AssetService {
     }
 
     @Override
+    @Transactional
     public Integer insert(Asset asset) {
         return assetMapper.insert(asset);
     }
 
     @Override
+    @Transactional
     public Integer updateById(Asset asset) {
         return assetMapper.updateById(asset);
     }
 
     @Override
+    @Transactional
     public Integer deleteById(Integer id) {
         return assetMapper.deleteById(id);
     }

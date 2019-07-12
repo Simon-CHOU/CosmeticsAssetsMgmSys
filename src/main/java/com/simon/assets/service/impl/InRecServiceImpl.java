@@ -8,6 +8,7 @@ import com.simon.assets.entity.InRec;
 import com.simon.assets.service.InRecService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,16 +29,19 @@ public class InRecServiceImpl implements InRecService {
     }
 
     @Override
+    @Transactional
     public Integer insert(InRec inRec) {
         return inRecMapper.insert(inRec);
     }
 
     @Override
+    @Transactional
     public Integer updateById(InRec inRec) {
         return inRecMapper.updateById(inRec);
     }
 
     @Override
+    @Transactional
     public Integer deleteById(Integer id) {
         return inRecMapper.deleteById(id);
     }

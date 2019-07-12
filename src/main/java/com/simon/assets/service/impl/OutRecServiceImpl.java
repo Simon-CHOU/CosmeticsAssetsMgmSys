@@ -8,6 +8,7 @@ import com.simon.assets.entity.OutRec;
 import com.simon.assets.service.OutRecService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -29,18 +30,21 @@ public class OutRecServiceImpl implements OutRecService {
     }
 
     @Override
+    @Transactional
     public Integer insert(OutRec outRec) {
         return outRecMapper.insert(outRec);
     }
 
     @Override
+    @Transactional
     public Integer updateById(OutRec outRec) {
-        return null;
+        return outRecMapper.updateById(outRec);
     }
 
     @Override
+    @Transactional
     public Integer deleteById(Integer id) {
-        return null;
+        return outRecMapper.deleteById(id);
     }
 
     @Override
