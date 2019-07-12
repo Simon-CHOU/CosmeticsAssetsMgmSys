@@ -25,9 +25,9 @@ public class UpdateTest {
         sysUser.setName("Nick");
 
         System.out.println(("----- insert method test ------"));
-        Integer ii  = userMapper.updateById(sysUser);
-        System.out.println(ii);
-        Assert.assertEquals(1, ii.intValue());
+//        Integer ii  = userMapper.updateById(sysUser);
+//        System.out.println(ii);
+//        Assert.assertEquals(1, ii.intValue());
 //        sysUserList.forEach(System.out::println);
     }
 }

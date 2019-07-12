@@ -43,6 +43,7 @@ public class SampleTest {
         IPage<SysUser> iPage  = userMapper.selectPage(page, queryWrapper);
         System.out.println("总页数："+ iPage.getPages());
         System.out.println("总记录数："+ iPage.getTotal());
+        Assert.assertEquals(1,iPage.getTotal());
         List<SysUser> userList = iPage.getRecords();
         userList.forEach(System.out::println);
     }

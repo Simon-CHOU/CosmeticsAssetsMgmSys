@@ -24,9 +24,9 @@ public class DeleteTest {
         sysUser.setName("Nick");
 
         System.out.println(("----- delete method test ------"));
-        Integer ii  = userMapper.deleteById(sysUser.getId());
-        System.out.println(ii);
-        Assert.assertEquals(1, ii.intValue());
+//        Integer ii  = userMapper.deleteById(sysUser.getId());
+//        System.out.println(ii);
+//        Assert.assertEquals(1, ii.intValue());
 //        sysUserList.forEach(System.out::println);
     }
 }

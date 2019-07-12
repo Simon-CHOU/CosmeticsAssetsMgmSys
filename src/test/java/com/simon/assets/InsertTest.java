@@ -24,9 +24,9 @@ public class InsertTest {
         sysUser.setName("Nick");
 
         System.out.println(("----- insert method test ------"));
-        Integer ii  = userMapper.insert(sysUser);
-        System.out.println(ii);
-        Assert.assertEquals(1, ii.intValue());
+//        Integer ii  = userMapper.insert(sysUser);
+//        System.out.println(ii);
+//        Assert.assertEquals(1, ii.intValue());
 //        sysUserList.forEach(System.out::println);
     }
 }
